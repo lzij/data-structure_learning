@@ -21,3 +21,27 @@ public class Sorts {
         }
         return a;
     }
+    
+    
+    //设置一个动态边界
+    public static int[] bubbleSort1(int[] a,int n){
+        if(n<=1) return a;
+        int lastexchange = 0;
+        int sortBorder =n-1;
+        for(int i =0;i<n;i++){
+            boolean flag = false;
+            for(int j = 0;j<sortBorder;j++){
+                if(a[j] >a[j+1]){
+                    int temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = temp;
+                    flag = true;
+                    lastexchange = j;
+                }
+            }
+            sortBorder =lastexchange;
+            if(!flag) break;
+        }
+        return a;
+    }
+}
