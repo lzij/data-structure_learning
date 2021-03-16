@@ -4,6 +4,8 @@ public class Sorts {
     public static void main(String[] args) {
         int[] a = {4,3,2,5,4,2,3,5,3,54};
         System.out.println(Arrays.toString(bubbleSort(a,a.length)));
+        System.out.println(Arrays.toString(insertSort(a,a.length)));
+        System.out.println(Arrays.toString(selectSort(a,a.length)));
     }
     public static int[] bubbleSort(int[]a,int n){
         if(n<=1) return a;
